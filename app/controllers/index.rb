@@ -59,3 +59,6 @@ get '/users/users' do
 	erb :'/users/users'
 end
 
+get '/users/index' do
+  erb :'/users/index'
+end
