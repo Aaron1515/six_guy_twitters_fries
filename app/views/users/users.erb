@@ -1,2 +1,30 @@
-# Suggest change name to /users/user_homepage
-<h1>Welcome <% @user.name %></h1>
+<h1>Welcome <% @user.username %></h1>
+
+<% access=false %>
+
+<% if @user.id == @session %>
+	<form action="/users/<%= @user.id %>/tweet" method="post">
+		<label for="content">Enter Your Tweet: </label>
+		<input type="text" name="content">
+		<input type="submit" value="Push">
+	</form>
+
+	<% access = true %>
+	
+<% end %>
+
+
+<fieldset>
+	<% @tweets.each do |t| %>
+		<p><%= t.content %></p>
+
+
+	<% if access %>
+	<form action="/users/<%= @user.id %>/tweet" method="post">
+		<input type="hidden" name="_method" value="delete">
+		<input type="submit" value="Delete">
+	</form>
+	<% end %>
+
+	<% end %>
+</fieldset>

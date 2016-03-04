@@ -42,22 +42,22 @@ class User < ActiveRecord::Base
     following.include?(user_to_lookup)
   end
 
+  
+
+  #display encrypted password
+  def password
+    @password ||= Password.new(digest_password)
+  end
+
+  #change password and encrypt
+  def password=(new_password)
+    @password = Password.create(new_password)
+    self.digest_password = @password
+  end
   #authenticate user
   def authenticate(plaintext_password)
   	self.password == plaintext_password
   end
-	
-
-	#display encrypted password
-	def password
-	  @password ||= Password.new(digest_password)
-	end
-
-	#change password and encrypt
-	def password=(new_password)
-	  @password = Password.create(new_password)
-	  self.digest_password = @password
-	end
 
 end
 

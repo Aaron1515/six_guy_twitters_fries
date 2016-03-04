@@ -1,11 +1,11 @@
 get '/' do # homepage login page
-  redirect '/login'
+  erb :index
 end
 
-post '/' do # Logout
-  session[:id] = nil
-  redirect '/login'
-end
+# post '/' do # Logout
+#   session[:id] = nil
+#   redirect '/login'
+# end
 
 get '/login' do # homepage login page
   erb :index
@@ -22,26 +22,16 @@ post '/users/new' do
   erb :index
 end
 
-post '/users/login' do
-  @user = User.find_by(email: params[:email])
-  if @user.authenticate(params[:password])
-    seccsion[:id] = @user.id
-    redirect "/users/#{@user.id}"
-  else
-    @message = "Email and Password not match. Please try again."
-    erb :index
-  end
-
-  # # if User.authenticate(params[:email], params[:password])
-  # "If log in is true, move to user page"
-  #   @user = User.find_by(email: params[:email])
-  #   session[:id] = @user.id
-  #   redirect "/users/#{@user.id}"
-  # else
-  #   @message = "Email and Password not match. Please try again."
-  #   erb :'users/index'
-  # end
-end
+# post '/users/login' do
+#   @user = User.find_by(email: params[:email])
+#   if @user.authenticate(params[:password])
+#     seccsion[:id] = @user.id
+#     redirect "/users/#{@user.id}"
+#   else
+#     @message = "Email and Password not match. Please try again."
+#     erb :index
+#   end
+# end
 
 
 # get '/new' do
