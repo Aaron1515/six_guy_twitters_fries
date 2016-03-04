@@ -1,0 +1,18 @@
+<h1 class="logo">Logo placeholder</h1>
+
+<header>
+<h2 class="username">Username</h2>
+
+<nav class="navy"><a href="#">Followers</a> <a href="#">Followees</a> <a href="#">All Users</a></nav>
+
+<section class="bio"><article><p><%= "Bio / Description" %></p></article></section>
+</header>
+
+<section class="mytweets">
+<article class="grey">
+<p class="grey">My Tweets</p>
+<% array = Array.new(10, "Tweet") %> <% array.each do |x| %>
+<p class="grey"><%= x %></p>
+<% end %>
+</article>
+</section>

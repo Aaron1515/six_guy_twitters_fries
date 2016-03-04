@@ -56,6 +56,7 @@ body {
     margin: 20px auto;
 }*/
 
+
 #bubblebox{ width:650px; height:250px; margin:50px auto; border:0px solid #AAA; float: left;padding: 50px}
 #bubbles{ width:auto; margin:0px auto; text-align:center; }
 #bubbles > div{ display:inline-block; width:10px; height:10px; margin:24px 10px 0px 10px; background:rgba(0,0,0,.1); text-align:center; border:2px solid #999; border-radius:100%; font-size:17px; text-decoration:none; transition: background 0.3s linear 0s; cursor:pointer; }
@@ -63,6 +64,51 @@ body {
 #bubblecontent > h2{ text-align:center; color:#7EA800; }
 #bubblecontent > p{ font-size:17px; line-height:1.5em; padding:20px 50px; color:#777; }
 
+
 #login_form { width: 300px; display: inline-block; margin:50px auto; margin-right: 10px; float: right; padding: 25px;}
 #register_form { width: 300px; margin: auto; margin-top: 40px;}
-/*#register_header { margin: auto;}*/
+
+.logo {
+	text-align: center;
+}
+
+.username {
+	margin-left: 15%;
+	border-style: solid;
+	border-color: #CF0A2C;
+	border-width: 5px;
+    margin-right: 15%;
+}
+
+.grey {
+	font-weight: bold;
+	color: #313131;
+}
+
+.navy {
+	margin-left: 15%;
+	border-style: solid;
+	border-color: #CF0A2C;
+	border-width: 5px;
+	margin-right: 15%;
+	margin-bottom: 2%;
+}
+
+.bio {
+	padding: 15px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #CF0A2C;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+.mytweets {
+	text-align: center;
+	margin-top: 2%;
+	margin-left: 15%;
+	margin-right: 15%;
+	border-style: solid;
+	border-color: #CF0A2C;
+    border-width: 5px;
+}
