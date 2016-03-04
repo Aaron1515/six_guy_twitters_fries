@@ -1,20 +1,73 @@
 <!-- Logo and banner -->
-<h1>Six Guys</h1>
-<h2>twitter and fries</h2>
+<!-- <h1>Six Guys</h1>
+<h2>twitter and fries</h2> -->
 
 <body>
-  <form action='users/login' method='post'>
-    username:<br>
-    <input type="text" name="username">
+<script>
+function _(x){return document.getElementById(x);}
+var ba, bi=0, intrvl;
+var bca = [
+  '<h2>@aaron</h2><p>Everybody tweet it!</p>',
+  '<h2>@chris</h2><p>It\'s raining outside.</p>',
+  '<h2>@david</h2><p>I\'m hella f***in\' cool</p>',
+  '<h2>@jeremy</h2><p>We will win.</p>',
+  '<h2>@baron</h2><p>Who do you turn this one?</p>',
+  '<h2>@kyle</h2><p>Who\'s trying to get some food truck today?</p>'
+];
+function bubbles(bi){
+  // Fade-out the content
+  _("bubblecontent").style.opacity = 0;
+  for(var i=0; i < ba.length; i++){
+    ba[i].style.background = "rgba(0,0,0,.1)";
+  }
+  ba[bi].style.background = "#999";
+  setTimeout(function(){
+    // Change the content
+    _("bubblecontent").innerHTML = bca[bi];
+    // Fade-in the content
+    _("bubblecontent").style.opacity = 1;
+  }, 300);
+}
+function bubbleSlide(){
+  bi++;
+  if(bi == ba.length){
+    bi = 0;
+  }
+  bubbles(bi);
+}
+window.addEventListener("load", function(){
+  ba = _("bubbles").children;
+  intrvl = setInterval(bubbleSlide, 3000);
+});
+</script>
+<div id="bubblebox">
+  <div id="bubbles">
+    <div onclick="bubbles(0); clearInterval(intrvl);" style="background:#999;"></div>
+    <div onclick="bubbles(1); clearInterval(intrvl);"></div>
+    <div onclick="bubbles(2); clearInterval(intrvl);"></div>
+    <div onclick="bubbles(3); clearInterval(intrvl);"></div>
+    <div onclick="bubbles(4); clearInterval(intrvl);"></div>
+    <div onclick="bubbles(5); clearInterval(intrvl);"></div>
+  </div>
+  <div id="bubblecontent">
+    <h2>6 Guys</h2>
+    <p>Burgers & Fries</p>
+  </div>
+</div>
+  <div id="login_form">
+    <form action='users/login' method='post'>
+      username:<br>
+      <input type="text" name="username">
+      <br>
+      password:<br>
+      <input type="text" name="password">
+      <br>
+      <input type="submit" value="Log In" />
+    </form>
     <br>
-    password:<br>
-    <input type="text" name="password">
-    <br>
-    <input type="submit" value="Log In" />
-  </form>
-  <br>
-  <form action="/new" method="get">
-    <input type="submit" value="Sign Up">
-  </form>
+    <form action="/new" method="get">
+      <input type="submit" value="Sign Up">
+    </form>
+  </div>
 </body>
 <!-- use css for buttons and shit -->
