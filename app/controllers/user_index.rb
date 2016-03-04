@@ -4,12 +4,17 @@ get '/users' do
 end
 
 get '/users/new' do
-#goes to new user form
-  erb :'users/new'
+  erb :new
 end
 
 post '/users' do
-  # @user = User.find_by(email: params[:email])
+  #need to make sure what the var is called.
+  # @user = User.create(user: params["username"], password: params["password"])
+  erb :'users/index'
+end
+
+post '/users/login' do
+    # @user = User.find_by(email: params[:email])
   # if @user.authenticate(params[:password])
   #   seccsion[id] = @user.id
   #   "I got in"
@@ -19,21 +24,22 @@ post '/users' do
 
 
   # if User.authenticate(params[:email], params[:password])
+  "If log in is true, move to user page"
   #   @user = User.find_by(email: params[:email])
   #   session[:id] = @user.id
   #   redirect "/users/#{@user.id}"
   # else
   #   @message = "message"
-  #   erb :"users/index"
-  # end
+  # redirect :'users/:id'
 end
 
 get '/users/:id' do
-# Shows user's profile
+
+  erb :'users/index'
 end
 
 get '/users/:id/edit' do
-# Brings you to edit form to update profile
+  # erb :'users/edit'
 end
 
 put '/users/:id' do
@@ -41,5 +47,6 @@ put '/users/:id' do
 end
 
 delete '/users' do
-#delete the user from our DB
+  # @user = User.find(param[:id])
+  redirect '/'
 end
