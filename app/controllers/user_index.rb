@@ -32,14 +32,16 @@
 #   erb :'users/edit'
 # end
 
-# put '/users/:id' do
-# @user = User.find(params["id"])
-# @user.assign_attributes(what_we_are_upding: params["thing we updating"])
-# if @user.save
-#   redirect '/users/index'
-# else
-#   erb :error
-# end
+put '/users/:id' do
+  @user = User.find(params["id"])
+  @user.assign_attributes(what_we_are_upding: params["thing we updating"])
+  if @user.save
+    redirect '/users/index'
+  else
+    erb :error
+  end
+end
+
 
 # delete '/users' do
 #   User.find(param[:id]).destroy
