@@ -9,7 +9,23 @@ get '/users/new' do
 end
 
 post '/users' do
-#create new user into our db
+  # @user = User.find_by(email: params[:email])
+  # if @user.authenticate(params[:password])
+  #   seccsion[id] = @user.id
+  #   "I got in"
+  # else
+  #   "I'm locked out"
+  # end
+
+
+  # if User.authenticate(params[:email], params[:password])
+  #   @user = User.find_by(email: params[:email])
+  #   session[:id] = @user.id
+  #   redirect "/users/#{@user.id}"
+  # else
+  #   @message = "message"
+  #   erb :"users/index"
+  # end
 end
 
 get '/users/:id' do
