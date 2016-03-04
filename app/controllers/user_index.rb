@@ -40,6 +40,7 @@ if @user.save
 else
   erb :error
 end
+end
 
 delete '/users' do
   User.find(param[:id]).destroy

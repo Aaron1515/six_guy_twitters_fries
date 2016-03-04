@@ -1,0 +1,36 @@
+/*body{
+    margin:0px;
+    background:#000;
+}*/
+body {
+    background-color: white;
+    color: #222;
+    font-family: 'Oxygen', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    min-height: 400px;
+    margin-bottom: 100px;
+    clear: both; /*Research more on this*/
+    
+}
+.header {
+    height:50px;
+    background:#CF0A2C;
+    position:fixed;
+    border:0px solid #CCC;
+    width:100%;
+    margin:0px;
+    top: 0px;
+}
+
+#logo {
+    height: 50px;
+    padding-left: 50%;
+}
+/*.content {
+    width:960px;
+    background: #F0F0F0;
+    border: 1px solid #CCC;
+    height: 2000px;
+    margin: 20px auto;
+}*/
