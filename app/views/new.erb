@@ -2,7 +2,7 @@
 <a href="/">Logo back to index</a>
 
   <div id=register_form>
-  <form action='/users/new' method='post'>
+  <form action='/users/new' method='post' name="signup" onsubmit="return validateForm();">
     <h2>Join Six Guys today.</h2>
     <label>username:</label><br>
     <input type="text" name="username" placeholder="username">
@@ -20,3 +20,15 @@
     <input type="submit" value="Register" >
   </form>
   </div>
+
+<script>
+function validateForm() {
+    var x = document.forms["signup"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
+}
+</script>
