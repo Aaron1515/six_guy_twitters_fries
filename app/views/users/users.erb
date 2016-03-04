@@ -1,12 +1,19 @@
-<h1>Welcome <% @user.username %></h1>
 
+<div class=tweet_box> 
 <% access=false %>
-
+<h1 id=user_welcome>Welcome <%=@user.username %></h1>
+<nav class="nav">
+	<ul>
+		<li><a href="#">Followers</a></li>
+		<li><a href="#">Followees</a></li>
+		<li><a href="#">All Users</a></li>
+	</ul>
+</nav>
 <% if @user.id == @session %>
 	<form action="/users/<%= @user.id %>/tweet" method="post">
 		<label for="content">Enter Your Tweet: </label>
 		<input type="text" name="content">
-		<input type="submit" value="Push">
+		<input type="submit" value="Tweet">
 	</form>
 
 	<% access = true %>
@@ -27,6 +34,7 @@
 
 	<% end %>
 </fieldset>
+</div>
 
 <!-- <h1 class="logo">Logo placeholder</h1>
 
