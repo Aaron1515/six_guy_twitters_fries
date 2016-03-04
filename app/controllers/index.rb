@@ -2,6 +2,11 @@ get '/' do # homepage login page
   redirect '/login'
 end
 
+post '/' do # Logout
+  session[:id] = nil
+  redirect '/login'
+end
+
 get '/login' do # homepage login page
   erb :index
 end
@@ -12,7 +17,7 @@ get '/users/new' do # get to register page
 end
 
 post '/users/new' do
-  @user = User.create(name: params[:username], email: params[:email], password: params[:password])
+  @user = User.create(username: params[:username], email: params[:email], password: params[:password])
   @message = "You can log in with your account now."
   erb :index
 end
@@ -38,7 +43,12 @@ post '/users/login' do
   # end
 end
 
-post '/' do # Log out
-  session[:id] = nil
-  redirect '/login'
-end
+
+# get '/new' do
+#   erb :new
+# end
+
+# post '/' do
+#   #User.create(user: params["username"], password: params["password"])
+#   erb :'users/user'
+# end
