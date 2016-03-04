@@ -1,12 +1,23 @@
 
+
+
+
+
 <div class=tweet_box>
+
 <% access=false %>
 <h1 id=user_welcome>Welcome <%=@user.username %></h1>
 <nav class="nav">
 	<ul>
-		<li><a href="/users/<%=@user.id%>/followers">Followers</a></li>
-		<li><a href="/users/<%=@user.id%>/followees">Followees</a></li>
+		<li><a href="/users/<%= @user.id %>/followers">Followers</a></li>
+		<li><a href="/users/<%= @user.id %>/followees">Following</a></li>
 		<li><a href="/users/index">All Users</a></li>
+		<% if @user.following?(params[:id]) %>
+		<li><a href="/users/<%= params[:id] %>/follow">Unfollow</a></li>
+		<% else %>
+		<li><a href="/users/<%= params[:id] %>/follow">Follow </a></li>
+		<li><a href="/" name="_method" value="post">Logout</li>
+		<% end %>
 	</ul>
 </nav>
 <% if @user.id == @session %>
@@ -22,10 +33,10 @@
 
 
 <fieldset>
+
 	<% @tweets.each do |t| %>
 		<p><%= t.content %></p>
 	<% if access %>
-
 	<form action="/users/<%= @user.id %>/tweet/<%= t.id %>" method="post">
 		<input type="hidden" name="_method" value="delete">
 		<input type="submit" value="Delete">

@@ -1,12 +1,16 @@
+
+
+
 <header>
 <div class=tweet_box>
 <p><h2 class="username">Username Followees</h2></p>
 
 <nav class="nav">
 	<ul>
-		<li><a href="#">Profile</a></li>
+		<li><a href="/users/<%=@user.id%>">Profile</a></li>
 		<li><a href="#">Followees</a></li>
 		<li><a href="#">All Users</a></li>
+		<li><a href="/" name="_method" value="post">Logout</li>
 	</ul>
 </nav>
 
@@ -14,9 +18,10 @@
 <section class="mytweets">
 <article class="grey">
 <p class="grey">Followees</p>
-<% array = Array.new(10, "Followee") %>
-<% array.each do |x| %>
-<p class="grey"><%= x %></p>
+<% @followees.each do |followee| %>
+	<p><a href="http://localhost:9393/users/102"><%= followee.username %></a></p>
+	<p><%= followee.email %></p>
+	<p><%= followee.bio %></p>
 <% end %>
 </article>
 </section>
