@@ -1,3 +1,41 @@
+
+/*body{
+    margin:0px;
+    background:#000;
+}*/
+body {
+    background-color: white;
+    color: #222;
+    font-family: 'Oxygen', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    min-height: 400px;
+    margin-bottom: 100px;
+    clear: both; /*Research more on this*/
+    
+}
+.header {
+    height:50px;
+    background:#CF0A2C;
+    position:fixed;
+    border:0px solid #CCC;
+    width:100%;
+    margin:0px;
+    top: 0px;
+}
+
+#logo {
+    height: 50px;
+    padding-left: 50%;
+}
+/*.content {
+    width:960px;
+    background: #F0F0F0;
+    border: 1px solid #CCC;
+    height: 2000px;
+    margin: 20px auto;
+}*/
+=======
 #bubblebox{ width:650px; height:250px; margin:50px auto; border:1px solid #AAA; float: left;}
 #bubbles{ width:auto; margin:0px auto; text-align:center; }
 #bubbles > div{ display:inline-block; width:10px; height:10px; margin:24px 10px 0px 10px; background:rgba(0,0,0,.1); text-align:center; border:2px solid #999; border-radius:100%; font-size:17px; text-decoration:none; transition: background 0.3s linear 0s; cursor:pointer; }
@@ -6,6 +44,7 @@
 #bubblecontent > p{ font-size:17px; line-height:1.5em; padding:20px 50px; color:#777; }
 
 #login_form { width: 300px; display: inline-block; margin:50px auto; margin-left: 10px;}
+<<<<<<< HEAD
 
 
 
@@ -56,3 +95,5 @@
 	border-color: #CF0A2C;
     border-width: 5px;
 }
+=======
+>>>>>>> eda6785384fcb156e378b3dc8f9bf268a1edb3d6
