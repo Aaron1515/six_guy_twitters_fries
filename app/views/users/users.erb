@@ -16,6 +16,7 @@
 		<li><a href="/users/<%= params[:id] %>/follow">Unfollow</a></li>
 		<% else %>
 		<li><a href="/users/<%= params[:id] %>/follow">Follow </a></li>
+		<li><a href="/" name="_method" value="post">Logout</li>
 		<% end %>
 	</ul>
 </nav>
