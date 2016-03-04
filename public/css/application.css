@@ -1,8 +1,114 @@
-#bubblebox{ width:650px; height:250px; margin:50px auto; border:1px solid #AAA; float: left;}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #CF0A2C;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.5s ease
+}
+
+input[type=submit]:hover {
+    background-color: #f63c5b;
+}
+body {
+    background-color: white;
+    color: #222;
+    font-family: 'Oxygen', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    min-height: 400px;
+    margin-bottom: 100px;
+    clear: both; /*Research more on this*/
+    
+}
+.header {
+    height:50px;
+    background:#CF0A2C;
+    position:fixed;
+    border:0px solid #CCC;
+    width:100%;
+    margin:0px;
+    top: 0px;
+}
+
+#logo {
+    height: 50px;
+    padding-left: 50%;
+}
+/*.content {
+    width:960px;
+    background: #F0F0F0;
+    border: 1px solid #CCC;
+    height: 2000px;
+    margin: 20px auto;
+}*/
+
+
+#bubblebox{ width:650px; height:250px; margin:50px auto; border:0px solid #AAA; float: left;padding: 50px}
 #bubbles{ width:auto; margin:0px auto; text-align:center; }
 #bubbles > div{ display:inline-block; width:10px; height:10px; margin:24px 10px 0px 10px; background:rgba(0,0,0,.1); text-align:center; border:2px solid #999; border-radius:100%; font-size:17px; text-decoration:none; transition: background 0.3s linear 0s; cursor:pointer; }
 #bubblecontent{ margin:0px auto; transition:opacity 0.3s linear 0s; font-family: Arial;}
 #bubblecontent > h2{ text-align:center; color:#7EA800; }
 #bubblecontent > p{ font-size:17px; line-height:1.5em; padding:20px 50px; color:#777; }
 
-#login_form { width: 300px; display: inline-block; margin:50px auto; margin-left: 10px;}
+
+#login_form { width: 300px; display: inline-block; margin:50px auto; margin-right: 10px; float: right; padding: 25px;}
+#register_form { width: 300px; margin: auto; margin-top: 40px;}
+
+.logo {
+	text-align: center;
+}
+
+.username {
+	margin-left: 15%;
+	border-style: solid;
+	border-color: #CF0A2C;
+	border-width: 5px;
+    margin-right: 15%;
+}
+
+.grey {
+	font-weight: bold;
+	color: #313131;
+}
+
+.navy {
+	margin-left: 15%;
+	border-style: solid;
+	border-color: #CF0A2C;
+	border-width: 5px;
+	margin-right: 15%;
+	margin-bottom: 2%;
+}
+
+.bio {
+	padding: 15px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #CF0A2C;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+.mytweets {
+	text-align: center;
+	margin-top: 2%;
+	margin-left: 15%;
+	margin-right: 15%;
+	border-style: solid;
+	border-color: #CF0A2C;
+    border-width: 5px;
+}

@@ -1,0 +1,26 @@
+<a href="/">Logo back to index</a>
+<h1>Edit Profile</h1>
+
+<body>
+  <h2>My Profile</h2>
+  <form action='/' method='post'>
+    <label>username:</label>
+    <br>
+    <input type="text" name="username" placeholder="<%= @user.username %>">
+    <br>
+    <label>password:</label>
+    <br>
+    <input type="text" name="password" placeholder="new password">
+    <br>
+    <label>email:</label>
+    <br>
+    <input type="text" name="email" placeholder="<%= @user.email %>">
+    <br>
+    <label>Bio</label>
+    <br>
+    <textarea rows = "3" cols = "30" placeholder="<%= @user.bio %>"></textarea>
+    <br>
+    <input type="submit" value="Register" >
+    <input type="hidden" name="_method" value="put">
+  </form>
+</body>
