@@ -2,7 +2,6 @@
 <!-- <h1>Six Guys</h1>
 <h2>twitter and fries</h2> -->
 
-<body>
 <script>
 function _(x){return document.getElementById(x);}
 var ba, bi=0, intrvl;
@@ -55,19 +54,18 @@ window.addEventListener("load", function(){
   </div>
 </div>
   <div id="login_form">
-    <form action='users/login' method='post'>
-      username:<br>
-      <input type="text" name="username">
+    <form action='/users/login' method='post'>
+      email:<br>
+      <input type="text" name="email">
       <br>
       password:<br>
-      <input type="text" name="password">
+      <input type="text" name="plaintext_password">
       <br>
       <input type="submit" value="Log In" />
     </form>
     <br>
-    <form action="/new" method="get">
+    <form action="/users/new" method="get">
       <input type="submit" value="Sign Up">
     </form>
   </div>
-</body>
 <!-- use css for buttons and shit -->

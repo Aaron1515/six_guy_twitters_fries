@@ -1,12 +1,17 @@
 <!-- Logo and banner -->
-<h2>username<h2>
+<header>
+<p><h2 class="username">All User List</h2></p>
+<p><h5 class="username">Pick at your peril, whomever you follow can never be unfollowed.</h5></p>
 
-<ul>
-<li>followers</li>
-<li>followees</li>
-<li>all users</li>
-</ul>
+<nav class="navy"><a href="#">Followers</a> <a href="#">Followees</a> <a href="#">All Users</a></nav>
 
-<h2>bio</h2>
+</header>
 
-<h3>user tweets list</h3>
+<section class="mytweets">
+<article class="grey">
+<p class="grey">Users</p>
+<% array = Array.new(10, "User") %> <% array.each do |x| %>
+<p class="grey"><%= x %></p>
+<% end %>
+</article>
+</section>
