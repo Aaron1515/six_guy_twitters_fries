@@ -1,0 +1,16 @@
+<header>
+<p><h2 class="username">Username Followees</h2></p>
+
+<nav class="navy"><a href="#">Followers</a> <a href="#">Followees</a> <a href="#">All Users</a></nav>
+
+</header>
+
+<section class="mytweets">
+<article class="grey">
+<p class="grey">Followees</p>
+<% array = Array.new(10, "Followee") %>
+<% array.each do |x| %>
+<p class="grey"><%= x %></p>
+<% end %>
+</article>
+</section>
