@@ -21,6 +21,7 @@ require "sinatra/reloader" if development?
 require 'erb'
 require 'pry'
 require 'bcrypt'
+require 'table_print'
 
 require 'faker'
 
