@@ -54,12 +54,12 @@ window.addEventListener("load", function(){
   </div>
 </div>
   <div id="login_form">
-    <form action='/users/login' method='post'>
-      email:<br>
-      <input type="text" name="email">
+    <form action='/users/login' method='post' name="signin" onsubmit="return validateForm();">
+      Email:<br>
+      <input type="text" name="email" placeholder="email">
       <br>
-      password:<br>
-      <input type="text" name="plaintext_password">
+      Password:<br>
+      <input type="text" name="plaintext_password" placeholder="password">
       <br>
       <input type="submit" value="Log In" />
     </form>
@@ -68,4 +68,16 @@ window.addEventListener("load", function(){
       <input type="submit" value="Sign Up">
     </form>
   </div>
-<!-- use css for buttons and shit -->
+
+<script>
+function validateForm() {
+    var x = document.forms["signin"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
+}
+</script>
+

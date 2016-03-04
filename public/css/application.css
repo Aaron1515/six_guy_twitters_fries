@@ -32,7 +32,7 @@ body {
     min-height: 400px;
     margin-bottom: 100px;
     clear: both; /*Research more on this*/
-    
+
 }
 .header {
     height:50px;
@@ -42,6 +42,7 @@ body {
     width:100%;
     margin:0px;
     top: 0px;
+
 }
 
 #logo {
@@ -68,15 +69,21 @@ body {
 #login_form { width: 300px; display: inline-block; margin:50px auto; margin-right: 10px; float: right; padding: 25px;}
 #register_form { width: 300px; margin: auto; margin-top: 40px;}
 
+.tweet_box{ width: 600px; margin: auto; margin-top: 60px;
+
+}
+
+
 .logo {
 	text-align: center;
 }
 
 .username {
+    margin-top: 5%;
 	margin-left: 15%;
 	border-style: solid;
 	border-color: #CF0A2C;
-	border-width: 5px;
+	border-width: 0px;
     margin-right: 15%;
 }
 
@@ -89,7 +96,7 @@ body {
 	margin-left: 15%;
 	border-style: solid;
 	border-color: #CF0A2C;
-	border-width: 5px;
+	border-width: 1px;
 	margin-right: 15%;
 	margin-bottom: 2%;
 }
@@ -110,5 +117,45 @@ body {
 	margin-right: 15%;
 	border-style: solid;
 	border-color: #CF0A2C;
+    border-width: 1px;
+}
+
+.user_welcome {
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-style: solid;
+    border-color: #CF0A2C;
     border-width: 5px;
 }
+
+.nav {
+background-color: #ffffff;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+    width: 70%; 
+}
+
+nav ul li {
+        display: inline-block;
+        transition: all 0.5s; 
+    }
+    
+        nav > ul > li > a {
+            
+            display: block;
+            line-height: 2em;
+            padding: 0 1em;
+            text-decoration: none;
+            color: #aaaaaa;
+        }
+
+nav > ul > li:hover {
+          background-color: #CF0A2C;
+        }
+
+        nav > ul > li:hover > a {
+          color: #ffffff;
+        }
