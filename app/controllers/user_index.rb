@@ -3,16 +3,6 @@ get '/users' do
   erb :'users/index'
 end
 
-get '/users/new' do
-  erb :new
-end
-
-post '/users' do
-  #need to make sure what the var is called.
-  # @user = User.create(user: params["username"], password: params["password"])
-  erb :'users/index'
-end
-
 post '/users/login' do
     # @user = User.find_by(email: params[:email])
   # if @user.authenticate(params[:password])
@@ -21,7 +11,6 @@ post '/users/login' do
   # else
   #   "I'm locked out"
   # end
-
 
   # if User.authenticate(params[:email], params[:password])
   "If log in is true, move to user page"
@@ -34,19 +23,25 @@ post '/users/login' do
 end
 
 get '/users/:id' do
-
-  erb :'users/index'
+  @user = User.find(params["id"])
+  erb :'users/users'
 end
 
 get '/users/:id/edit' do
-  # erb :'users/edit'
+  @user = User.find(params["id"])
+  erb :'users/edit'
 end
 
 put '/users/:id' do
-#update the user's profile into the DB
+@user = User.find(params["id"])
+@user.assign_attributes(what_we_are_upding: params["thing we updating"])
+if @user.save
+  redirect '/users/index'
+else
+  erb :error
 end
 
 delete '/users' do
-  # @user = User.find(param[:id])
+  User.find(param[:id]).destroy
   redirect '/'
 end
