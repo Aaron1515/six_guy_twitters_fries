@@ -17,17 +17,16 @@
 	</form>
 
 	<% access = true %>
-	
+
 <% end %>
 
 
 <fieldset>
 	<% @tweets.each do |t| %>
 		<p><%= t.content %></p>
-
-
 	<% if access %>
-	<form action="/users/<%= @user.id %>/tweet" method="post">
+
+	<form action="/users/<%= @user.id %>/tweet/<%= t.id %>" method="post">
 		<input type="hidden" name="_method" value="delete">
 		<input type="submit" value="Delete">
 	</form>
