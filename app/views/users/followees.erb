@@ -1,0 +1,5 @@
+<% @followees.each do |followee| %>
+	<p><a href="http://localhost:9393/users/102"><%= followee.username %></a></p>
+	<p><%= followee.email %></p>
+	<p><%= followee.bio %></p>
+<% end %>

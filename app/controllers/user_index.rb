@@ -5,7 +5,6 @@ get '/users' do
 end
 
 post '/users/login' do
-  p params
   @user = User.find_by(email: params[:email])
   if @user && @user.authenticate(params[:plaintext_password])
     session[:id] = @user.id

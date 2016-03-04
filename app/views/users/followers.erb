@@ -1,0 +1,5 @@
+<% @followers.each do |follower| %>
+	<p><a href="/users/#{@user.id}"><%= follower.username %></a></p>
+	<p><%= follower.email %></p>
+	<p><%= follower.bio %></p>
+<% end %>

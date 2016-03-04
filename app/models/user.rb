@@ -39,7 +39,7 @@ class User < ActiveRecord::Base
 
   def following?(other_user_id)
   	user_to_lookup = User.find_by(id: other_user_id)
-    following.include?(user_to_lookup)
+    followees.include?(user_to_lookup)
   end
 
   

@@ -1,5 +1,14 @@
 <h1>Welcome <% @user.username %></h1>
 
+<a href="/users/<%= @user.id %>/followers">Followers</a>
+<a href="/users/<%= @user.id %>/followees">Following</a>
+
+<% if @user.following?(params[:id]) %>
+	<a href="/users/<%= params[:id] %>/follow">Unfollow</a> 
+<% else %>
+	<a href="/users/<%= params[:id] %>/follow">Follow </a>
+<% end %>
+
 <% access=false %>
 
 <% if @user.id == @session %>
@@ -15,15 +24,16 @@
 
 
 <fieldset>
+
 	<% @tweets.each do |t| %>
 		<p><%= t.content %></p>
 
 
 	<% if access %>
-	<form action="/users/<%= @user.id %>/tweet" method="post">
-		<input type="hidden" name="_method" value="delete">
-		<input type="submit" value="Delete">
-	</form>
+		<form action="/users/<%= @user.id %>/tweet" method="post">
+			<input type="hidden" name="_method" value="delete">
+			<input type="submit" value="Delete">
+		</form>
 	<% end %>
 
 	<% end %>

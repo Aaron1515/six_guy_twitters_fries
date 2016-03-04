@@ -3,7 +3,8 @@
 # end
 
 post '/users/:id/tweet' do
-  p params
+  p '*' * 50
+  p 'hit tweet controller'
   @user = User.find_by_id(params[:id])
   # @tweets = Tweet.where(user_id: @user.id)
   @tweet = Tweet.create(user_id: params[:id], content: params[:content])
