@@ -32,39 +32,6 @@ get '/users/:id' do
   end
 end
 
-# get '/users/:id/edit' do # get to the edit form specific user
-#   @user = User.find_by_id(params[:id])
-#   erb :'users/edit'
-# end
-
-
-# put '/users/:id' do # Update a specific user (action)
-#   @user = User.find_by_id(params[:id])
-#   # Update the attributes of user's choice
-#   @user.assign_attributes(column: params["attributes"])
-#   if @user.save
-#     redirect '/users/index'
-#   else
-#     @message = "Error. Please try again." # Create message for what goes wrong for user when returning back to homepage
-#     erb :'users/edit'
-#   end
-# end
-
-# put '/users/:id' do
-#   @user = User.find(params["id"])
-#   @user.assign_attributes(what_we_are_upding: params["thing we updating"])
-#   if @user.save
-#     redirect '/users/index'
-#   else
-#     erb :error
-#   end
-# end
-
-# delete '/users' do
-#   User.find_by_id(param[:id]).destroy
-#   redirect '/'
-# end
-
 
 
 

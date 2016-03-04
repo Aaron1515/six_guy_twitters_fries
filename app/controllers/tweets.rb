@@ -11,7 +11,10 @@ post '/users/:id/tweet' do
   redirect "/users/#{@user.id}"
 end
 
-# delete '/users/:id/tweet' do
-  
-# end
-
+delete '/users/:id/tweet/:id' do
+  # binding.pry
+  @tweet = Tweet.find_by_id(params[:id])
+  @tweet.destroy
+  # "Hello World"
+  redirect "/users/#{params["captures"][0]}"
+end
