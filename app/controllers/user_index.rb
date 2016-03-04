@@ -41,7 +41,6 @@ put '/users/:id' do
     erb :error
   end
 end
-end
 
 
 # delete '/users' do

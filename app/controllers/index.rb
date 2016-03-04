@@ -2,9 +2,9 @@ get '/' do
   erb :index
 end
 
-# get '/new' do
-#   erb :new
-# end
+get '/new' do
+  erb :new
+end
 
 post '/' do
   #User.create(user: params["username"], password: params["password"])
@@ -22,4 +22,8 @@ end
 
 get '/users/index' do
   erb :'/users/index'
+end
+
+get '/users/edit' do
+	erb :'/users/edit'
 end
