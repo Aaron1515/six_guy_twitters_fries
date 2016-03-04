@@ -20,3 +20,6 @@ end
 #   erb :'users/user'
 # end
 
+get '/users/index' do
+  erb :'/users/index'
+end
