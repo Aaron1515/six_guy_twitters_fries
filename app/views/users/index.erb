@@ -20,9 +20,11 @@
 <section class="mytweets">
 <article class="grey">
 <p class="grey">Users</p>
-<% array = Array.new(10, "User") %> <% array.each do |x| %>
-<p class="grey"><%= x %></p>
+<% User.all.each do |each| %>
+
+<%= each.username %>
 <% end %>
+
 </article>
 </section>
 </div>

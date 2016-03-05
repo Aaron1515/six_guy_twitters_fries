@@ -1,10 +1,10 @@
 # User.create(users: ,follower_ship:, password:,  email:)
 
 # Users
-User.create!(username:  "david",
-             email: "dave@dave.com",
-             password: "test",
-             bio: "this is a test")
+# User.create!(username:  "david",
+#              email: "dave@dave.com",
+#              password: "test",
+#              bio: "this is a test")
 
 99.times do |n|
   username  = Faker::Name.name
