@@ -7,11 +7,11 @@
 <!-- <nav class="navy"><a href="#">Followers</a> <a href="#">Followees</a> <a href="#">All Users</a></nav> -->
 
 <nav class="nav">
-	<ul>
-		<li><a href="#">Followers</a></li>
-		<li><a href="#">Followees</a></li>
-		<li><a href="#">Profile</a></li>
-	</ul>
+  <ul>
+    <li><a href="#">Followers</a></li>
+    <li><a href="#">Followees</a></li>
+    <li><a href="#">Profile</a></li>
+  </ul>
 </nav>
 
 </header>
@@ -19,9 +19,11 @@
 <section class="mytweets">
 <article class="grey">
 <p class="grey">Users</p>
-<% array = Array.new(10, "User") %> <% array.each do |x| %>
-<p class="grey"><%= x %></p>
+<% User.all.each do |each| %>
+
+<%= each.username %>
 <% end %>
+
 </article>
 </section>
 </div>
