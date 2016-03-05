@@ -19,10 +19,11 @@
 
 <section class="mytweets">
 <article class="grey">
-<p class="grey">Users</p>
+<h1>Users</h1>
 <% User.all.each do |each| %>
 
 <%= each.username %>
+<br>
 <% end %>
 
 </article>
