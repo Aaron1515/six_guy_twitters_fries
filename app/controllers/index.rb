@@ -2,10 +2,10 @@ get '/' do # homepage login page
   erb :index
 end
 
-# post '/' do # Logout
-#   session[:id] = nil
-#   redirect '/login'
-# end
+post '/' do # Logout
+  session[:id] = nil
+  redirect '/login'
+end
 
 get '/login' do # homepage login page
   erb :index

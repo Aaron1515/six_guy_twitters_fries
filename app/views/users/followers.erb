@@ -1,11 +1,15 @@
+
+
+
 <header>
 <p><h2 class="username">Username Followers</h2></p>
 
 <nav class="nav">
 	<ul>
-		<li><a href="/user/<%=@user.id%>/followers">Followers</a></li>
-		<li><a href="/user/<%=@user.id%>/followees">Followees</a></li>
-		<li><a href="/user/<%=@user.id%>">Profile</a></li>
+		<li><a href="#">Followers</a></li>
+		<li><a href="#">Followees</a></li>
+		<li><a href="/users/<%=@user.id%>">Profile</a></li>
+		<li><a href="/" name="_method" value="post">Logout</li>
 	</ul>
 </nav>
 
@@ -14,8 +18,12 @@
 <section class="mytweets">
 <article class="grey">
 <p class="grey">Followers</p>
-<% array = Array.new(10, "Follower") %> <% array.each do |x| %>
-<p class="grey"><%= x %></p>
+<% @followers.each do |follower| %>
+	<p><a href="/users/#{@user.id}"><%= follower.username %></a></p>
+	<p><%= follower.email %></p>
+	<p><%= follower.bio %></p>
 <% end %>
+
+
 </article>
 </section>
